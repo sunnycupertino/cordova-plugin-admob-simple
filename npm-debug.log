@@ -14,119 +14,39 @@
 8 silly cache add   rawSpec: '.',
 8 silly cache add   spec: 'C:\\Users\\matthew\\Google Drive\\MyDocs\\dev\\plugins\\cordova-plugin-admob-simple',
 8 silly cache add   type: 'directory' }
-9 verbose addLocalDirectory C:\Users\matthew\AppData\Roaming\npm-cache\cordova-plugin-admob-simple\3.1.2\package.tgz not in flight; packing
-10 verbose tar pack [ 'C:\\Users\\matthew\\AppData\\Roaming\\npm-cache\\cordova-plugin-admob-simple\\3.1.2\\package.tgz',
+9 verbose addLocalDirectory C:\Users\matthew\AppData\Roaming\npm-cache\cordova-plugin-admob-simple\3.1.3\package.tgz not in flight; packing
+10 verbose tar pack [ 'C:\\Users\\matthew\\AppData\\Roaming\\npm-cache\\cordova-plugin-admob-simple\\3.1.3\\package.tgz',
 10 verbose tar pack   'C:\\Users\\matthew\\Google Drive\\MyDocs\\dev\\plugins\\cordova-plugin-admob-simple' ]
-11 verbose tarball C:\Users\matthew\AppData\Roaming\npm-cache\cordova-plugin-admob-simple\3.1.2\package.tgz
+11 verbose tarball C:\Users\matthew\AppData\Roaming\npm-cache\cordova-plugin-admob-simple\3.1.3\package.tgz
 12 verbose folder C:\Users\matthew\Google Drive\MyDocs\dev\plugins\cordova-plugin-admob-simple
-13 info prepublish cordova-plugin-admob-simple@3.1.2
-14 verbose addLocalTarball adding from inside cache C:\Users\matthew\AppData\Roaming\npm-cache\cordova-plugin-admob-simple\3.1.2\package.tgz
-15 silly cache afterAdd cordova-plugin-admob-simple@3.1.2
-16 verbose afterAdd C:\Users\matthew\AppData\Roaming\npm-cache\cordova-plugin-admob-simple\3.1.2\package\package.json not in flight; writing
-17 verbose afterAdd C:\Users\matthew\AppData\Roaming\npm-cache\cordova-plugin-admob-simple\3.1.2\package\package.json written
-18 silly publish { name: 'cordova-plugin-admob-simple',
-18 silly publish   version: '3.1.2',
-18 silly publish   description: 'The FASTEST and EASIEST TO USE Cordova Admob plugin for Android, iOS and Windows phone. We do not send your apps details to our servers. Pure OpenSource Admob code. Allows preloading and automatic loading of interstitials and banners plus more. Works with Cordova, Phonegap, Intel XDK/Crosswalk, Ionic, Meteor and more.',
-18 silly publish   cordova:
-18 silly publish    { id: 'cordova-plugin-admob-simple',
-18 silly publish      platforms: [ 'android', 'ios', 'wp8', 'windows' ] },
-18 silly publish   repository:
-18 silly publish    { type: 'git',
-18 silly publish      url: 'https://github.com/sunnycupertino/cordova-plugin-admob-simple.git' },
-18 silly publish   bugs: { url: 'https://github.com/sunnycupertino/cordova-plugin-admob-simple/issues' },
-18 silly publish   keywords:
-18 silly publish    [ 'cordova',
-18 silly publish      'admob',
-18 silly publish      'plugin',
-18 silly publish      'phonegap',
-18 silly publish      'intel-xdk',
-18 silly publish      'intel',
-18 silly publish      'xdk',
-18 silly publish      'crosswalk',
-18 silly publish      'ionic',
-18 silly publish      'meteor',
-18 silly publish      'ad',
-18 silly publish      'ecosystem:cordova',
-18 silly publish      'cordova-android',
-18 silly publish      'cordova-ios',
-18 silly publish      'cordova-wp8',
-18 silly publish      'google',
-18 silly publish      'ads',
-18 silly publish      'eclipse',
-18 silly publish      'android-studio',
-18 silly publish      'simple',
-18 silly publish      'android',
-18 silly publish      'ios',
-18 silly publish      'windows',
-18 silly publish      'phonegap',
-18 silly publish      'monetization',
-18 silly publish      'monetisation',
-18 silly publish      'money',
-18 silly publish      'banner',
-18 silly publish      'interstitial',
-18 silly publish      'advertisement',
-18 silly publish      'advertising',
-18 silly publish      'earn',
-18 silly publish      'cordova-admob',
-18 silly publish      'admobpro' ],
-18 silly publish   tonicExampleFilename: 'test.js',
-18 silly publish   author: { name: 'Cupertino' },
-18 silly publish   license: 'MIT',
-18 silly publish   readme: '## Cordova/Phonegap AdMob Plugin\r\n\r\nThe FASTEST and EASIEST TO USE Cordova Admob plugin for Android, iOS and Windows phone. We do not send your apps details to our servers. Pure OpenSource Admob code. Allows preloading and automatic loading of interstitials and banners plus more. Works with Cordova, Phonegap, Intel XDK/Crosswalk, Ionic, Meteor and more.\r\n\r\n## CONTENTS\r\n1. [DESCRIPTION](#description)\r\n2. [QUICK START](#quick-start)\r\n3. [CODING DETAILS - Load interstitial first and show later](#coding-details-load-interstitial-first-and-show-later)\r\n4. [CODING DETAILS - Show interstitial when it\'s loaded](#coding-details-show-interstitial-when-it-is-loaded)\r\n5. [VIDEO DEMO](#video-demo)\r\n6. [ECLIPSE NOTES](#eclipse-notes)\r\n7. [ANDROID STUDIO NOTES](#android-studio-notes)\r\n8. [CAUTION](#caution)\r\n\r\n## DESCRIPTION\r\n\r\nA Cordova-Phonegap plugin that allows you to integrate Google Admob ads into your iOS or Android app and display banners or interstitials. Cordova allows you to build cross platform HTML 5 and Javascript apps without having to rewrite in Objective C or Java.\r\n\r\n## QUICK START\r\n\r\n- Create your app\r\n\r\n```bash\r\ncordova create hallo com.example.hallo HalloWorld\r\n\r\ncd hallo\r\n\r\ncordova platform add android\r\n```\r\n\r\n- Add the plugin\r\n```bash\r\ncordova plugin add cordova-plugin-admob-simple\r\n```\r\nOR\r\n```bash\r\ncordova plugin add https://github.com/sunnycupertino/cordova-plugin-admob-simple\r\n```\r\n\r\n\r\n## CODING DETAILS Load interstitial first and show later\r\n\r\n- Add the following javascript functions, put in your own ad code, play with the variables if you want.\r\n\r\n- Call initAd() from onDeviceReady()\r\n```javascript\r\n//initialize the goodies\r\nfunction initAd(){\r\n        if ( window.plugins && window.plugins.AdMob ) {\r\n            var ad_units = {\r\n                ios : {\r\n                    banner: \'ca-app-pub-xxxxxxxxxxx/xxxxxxxxxxx\',\t\t//PUT ADMOB ADCODE HERE\r\n                    interstitial: \'ca-app-pub-xxxxxxxxxxx/xxxxxxxxxxx\'\t//PUT ADMOB ADCODE HERE\r\n                },\r\n                android : {\r\n                    banner: \'ca-app-pub-xxxxxxxxxxx/xxxxxxxxxxx\',\t\t//PUT ADMOB ADCODE HERE\r\n                    interstitial: \'ca-app-pub-xxxxxxxxxxx/xxxxxxxxxxx\'\t//PUT ADMOB ADCODE HERE\r\n                }\r\n            };\r\n            var admobid = ( /(android)/i.test(navigator.userAgent) ) ? ad_units.android : ad_units.ios;\r\n\r\n            window.plugins.AdMob.setOptions( {\r\n                publisherId: admobid.banner,\r\n                interstitialAdId: admobid.interstitial,\r\n                adSize: window.plugins.AdMob.AD_SIZE.SMART_BANNER,\t//use SMART_BANNER, BANNER, LARGE_BANNER, IAB_MRECT, IAB_BANNER, IAB_LEADERBOARD\r\n                bannerAtTop: false, // set to true, to put banner at top\r\n                overlap: true, // banner will overlap webview \r\n                offsetTopBar: false, // set to true to avoid ios7 status bar overlap\r\n                isTesting: false, // receiving test ad\r\n                autoShow: false // auto show interstitial ad when loaded\r\n            });\r\n\r\n            registerAdEvents();\r\n            window.plugins.AdMob.createInterstitialView();\t//get the interstitials ready to be shown\r\n            window.plugins.AdMob.requestInterstitialAd();\r\n\r\n        } else {\r\n            //alert( \'admob plugin not ready\' );\r\n        }\r\n}\r\n//functions to allow you to know when ads are shown, etc.\r\nfunction registerAdEvents() {\r\n        document.addEventListener(\'onReceiveAd\', function(){});\r\n        document.addEventListener(\'onFailedToReceiveAd\', function(data){});\r\n        document.addEventListener(\'onPresentAd\', function(){});\r\n        document.addEventListener(\'onDismissAd\', function(){ });\r\n        document.addEventListener(\'onLeaveToAd\', function(){ });\r\n        document.addEventListener(\'onReceiveInterstitialAd\', function(){ });\r\n        document.addEventListener(\'onPresentInterstitialAd\', function(){ });\r\n        document.addEventListener(\'onDismissInterstitialAd\', function(){\r\n        \twindow.plugins.AdMob.createInterstitialView();\t\t\t//REMOVE THESE 2 LINES IF USING AUTOSHOW\r\n            window.plugins.AdMob.requestInterstitialAd();\t\t\t//get the next one ready only after the current one is closed\r\n        });\r\n    }\r\n\r\n```\r\n- Add the following 2 functions and call them when you want ads to show\r\n```javascript\r\n//display the banner\r\nfunction showBannerFunc(){\r\n\twindow.plugins.AdMob.createBannerView();\r\n}\r\n//display the interstitial\r\nfunction showInterstitialFunc(){\r\n\twindow.plugins.AdMob.showInterstitialAd();\r\n}\r\n```\r\n- To close the banner\r\n```javascript\r\n    window.plugins.AdMob.destroyBannerView();\r\n```\r\n\r\n## CODING DETAILS Show interstitial when it is loaded\r\n\r\n- Add the following javascript functions, put in your own ad code, play with the variables if you want.\r\n\r\n- Call initAd() from onDeviceReady()\r\n```javascript\r\n//initialize the goodies\r\nfunction initAd(){\r\n        if ( window.plugins && window.plugins.AdMob ) {\r\n            var ad_units = {\r\n                ios : {\r\n                    banner: \'ca-app-pub-xxxxxxxxxxx/xxxxxxxxxxx\',\t\t//PUT ADMOB ADCODE HERE\r\n                    interstitial: \'ca-app-pub-xxxxxxxxxxx/xxxxxxxxxxx\'\t//PUT ADMOB ADCODE HERE\r\n                },\r\n                android : {\r\n                    banner: \'ca-app-pub-xxxxxxxxxxx/xxxxxxxxxxx\',\t\t//PUT ADMOB ADCODE HERE\r\n                    interstitial: \'ca-app-pub-xxxxxxxxxxx/xxxxxxxxxxx\'\t//PUT ADMOB ADCODE HERE\r\n                }\r\n            };\r\n            var admobid = ( /(android)/i.test(navigator.userAgent) ) ? ad_units.android : ad_units.ios;\r\n\r\n            window.plugins.AdMob.setOptions( {\r\n                publisherId: admobid.banner,\r\n                interstitialAdId: admobid.interstitial,\r\n                adSize: window.plugins.AdMob.AD_SIZE.SMART_BANNER,\t//use SMART_BANNER, BANNER, LARGE_BANNER, IAB_MRECT, IAB_BANNER, IAB_LEADERBOARD\r\n                bannerAtTop: false, // set to true, to put banner at top\r\n                overlap: true, // banner will overlap webview\r\n                offsetTopBar: false, // set to true to avoid ios7 status bar overlap\r\n                isTesting: false, // receiving test ad\r\n                autoShow: true // auto show interstitial ad when loaded\r\n            });\r\n\r\n            registerAdEvents();\r\n        } else {\r\n            //alert( \'admob plugin not ready\' );\r\n        }\r\n}\r\n//functions to allow you to know when ads are shown, etc.\r\nfunction registerAdEvents() {\r\n        document.addEventListener(\'onReceiveAd\', function(){});\r\n        document.addEventListener(\'onFailedToReceiveAd\', function(data){});\r\n        document.addEventListener(\'onPresentAd\', function(){});\r\n        document.addEventListener(\'onDismissAd\', function(){ });\r\n        document.addEventListener(\'onLeaveToAd\', function(){ });\r\n        document.addEventListener(\'onReceiveInterstitialAd\', function(){ });\r\n        document.addEventListener(\'onPresentInterstitialAd\', function(){ });\r\n        document.addEventListener(\'onDismissInterstitialAd\', function(){ });\r\n    }\r\n\r\n```\r\n- Add the following 2 functions and call them when you want ads to show\r\n```javascript\r\n//display the banner\r\nfunction showBannerFunc(){\r\n\twindow.plugins.AdMob.createBannerView();\r\n}\r\n//display the interstitial\r\nfunction showInterstitialFunc(){\r\n\twindow.plugins.AdMob.createInterstitialView();\t//get the interstitials ready to be shown and show when it\'s loaded.\r\n\twindow.plugins.AdMob.requestInterstitialAd();\r\n}\r\n```\r\n- To close the banner\r\n```javascript\r\n    window.plugins.AdMob.destroyBannerView();\r\n```\r\n\r\n## VIDEO DEMO\r\n\r\n* Watch the video below to see a tutorial on how to install the Cordova Admob Plugin with Android Studio:\r\n\r\n[![Video](https://github.com/sunnycupertino/cordova-plugin-admob-simple/raw/master/docs/cordova-admob-plugin-video.jpg)](https://youtu.be/esHGZxmXOMg)\r\n\r\n## ECLIPSE NOTES\r\n\r\n- Import your cordova project into eclipse, make sure you import the folder \'platforms/android\', not the base folder of the project.\r\n\r\n- Copy the google-play-services.jar into the libs folder.\r\n\r\n- Add the following line to the manifest file, just before the ending application tag\r\n```javascript\r\n<meta-data android:name="com.google.android.gms.version" android:value="8487000" />\r\n```\r\n- If your play services is a different version, then use the right value above. The console will warn you when you try run it if it\'s wrong. \r\n   \r\n## ANDROID STUDIO NOTES\r\n\r\n- Import your Cordova project with File->new->import project\r\n\r\n- Make sure you import the folder \'platforms/android\' or \'platforms/ios\', not the base folder of the project.\r\n\r\n- Now you have to launch the sdk manager and download and install the following files located under "extras" (if you don\'t have them already): \r\n\tAndroid support repository, Google play services, Google repository.\r\n\r\n## CAUTION\r\n- Do not click your own ads or google could cancel all your accounts. They have automatic systems checking for this. For testing use the  \'isTesting: true\' javascript variable in the code below.\r\n\r\n- Do not make apps that allow people to download youtube movies, this is against their terms of service also. They will find out.\r\n\r\n- Do not make apps that embed youtube movies in a way that is not allowed.\r\n\r\nCredits to Liming Xie\r\n\r\n## The MIT License (MIT)\r\n\r\nCopyright (c) 2016 Sunny Cupertino,\r\n\r\nPermission is hereby granted, free of charge, to any person obtaining a copy of\r\nthis software and associated documentation files (the "Software"), to deal in\r\nthe Software without restriction, including without limitation the rights to\r\nuse, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of\r\nthe Software, and to permit persons to whom the Software is furnished to do so,\r\nsubject to the following conditions:\r\n\r\nThe above copyright notice and this permission notice shall be included in all\r\ncopies or substantial portions of the Software.\r\n\r\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS\r\nFOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\r\nCOPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER\r\nIN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN\r\nCONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\r\nDISCLAIMER. TWO PERCENT OF THE AD REQUESTS GO TO THE DEVS.\r\n\r\n\r\n![track](http://goo.gl/tkH4rZ)\r\n',
-18 silly publish   readmeFilename: 'README.md',
-18 silly publish   gitHead: 'fc26afe4c8eeda333ad8a17cd80c1745eacab8ed',
-18 silly publish   homepage: 'https://github.com/sunnycupertino/cordova-plugin-admob-simple',
-18 silly publish   _id: 'cordova-plugin-admob-simple@3.1.2',
-18 silly publish   scripts: {},
-18 silly publish   _shasum: 'd3ca505007b10d2fb0ab4fe7dc88d644f1bdcfe1',
-18 silly publish   _from: '.' }
-19 silly mapToRegistry name cordova-plugin-admob-simple
-20 silly mapToRegistry using default registry
-21 silly mapToRegistry registry https://registry.npmjs.org/
-22 silly mapToRegistry uri https://registry.npmjs.org/cordova-plugin-admob-simple
-23 verbose publish registryBase https://registry.npmjs.org/
-24 silly publish uploading C:\Users\matthew\AppData\Roaming\npm-cache\cordova-plugin-admob-simple\3.1.2\package.tgz
-25 verbose request uri https://registry.npmjs.org/cordova-plugin-admob-simple
-26 verbose request sending authorization for write operation
-27 info attempt registry request try #1 at 8:18:11 PM
-28 verbose request using bearer token for auth
-29 verbose request id 7bae00db11cea981
-30 http request PUT https://registry.npmjs.org/cordova-plugin-admob-simple
-31 http 403 https://registry.npmjs.org/cordova-plugin-admob-simple
-32 verbose headers { 'content-type': 'application/json',
-32 verbose headers   'cache-control': 'max-age=300',
-32 verbose headers   'content-length': '95',
-32 verbose headers   'accept-ranges': 'bytes',
-32 verbose headers   date: 'Thu, 20 Oct 2016 18:18:14 GMT',
-32 verbose headers   via: '1.1 varnish',
-32 verbose headers   connection: 'keep-alive',
-32 verbose headers   'x-served-by': 'cache-fra1248-FRA',
-32 verbose headers   'x-cache': 'MISS',
-32 verbose headers   'x-cache-hits': '0',
-32 verbose headers   'x-timer': 'S1476987492.634286,VS0,VE2342',
-32 verbose headers   vary: 'Accept-Encoding' }
-33 verbose request invalidating C:\Users\matthew\AppData\Roaming\npm-cache\registry.npmjs.org\cordova-plugin-admob-simple on PUT
-34 error publish Failed PUT 403
-35 verbose stack Error: "You cannot publish over the previously published version 3.1.2." : cordova-plugin-admob-simple
-35 verbose stack     at CachingRegistryClient.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:247:14)
-35 verbose stack     at Request._callback (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:170:14)
-35 verbose stack     at Request.self.callback (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:344:22)
-35 verbose stack     at Request.emit (events.js:110:17)
-35 verbose stack     at Request.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1239:14)
-35 verbose stack     at Request.emit (events.js:129:20)
-35 verbose stack     at IncomingMessage.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1187:12)
-35 verbose stack     at IncomingMessage.emit (events.js:129:20)
-35 verbose stack     at _stream_readable.js:908:16
-35 verbose stack     at process._tickCallback (node.js:355:11)
-36 verbose statusCode 403
-37 verbose pkgid cordova-plugin-admob-simple
-38 verbose cwd C:\Users\matthew\Google Drive\MyDocs\dev\plugins\cordova-plugin-admob-simple
-39 error Windows_NT 6.1.7601
-40 error argv "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish"
-41 error node v0.12.2
-42 error npm  v2.7.4
-43 error code E403
-44 error "You cannot publish over the previously published version 3.1.2." : cordova-plugin-admob-simple
-45 error If you need help, you may report this error at:
-45 error     <https://github.com/npm/npm/issues>
-46 verbose exit [ 1, true ]
+13 info prepublish cordova-plugin-admob-simple@3.1.3
+14 verbose unsafe-perm in lifecycle true
+15 info cordova-plugin-admob-simple@3.1.3 Failed to exec prepublish script
+16 error addLocalDirectory Could not pack C:\Users\matthew\Google Drive\MyDocs\dev\plugins\cordova-plugin-admob-simple to C:\Users\matthew\AppData\Roaming\npm-cache\cordova-plugin-admob-simple\3.1.3\package.tgz
+17 error addLocal Could not install C:\Users\matthew\Google Drive\MyDocs\dev\plugins\cordova-plugin-admob-simple
+18 verbose stack Error: cordova-plugin-admob-simple@3.1.3 prepublish: `npm-run-all clean build`
+18 verbose stack Exit status 1
+18 verbose stack     at EventEmitter.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\lifecycle.js:213:16)
+18 verbose stack     at EventEmitter.emit (events.js:110:17)
+18 verbose stack     at ChildProcess.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\spawn.js:14:12)
+18 verbose stack     at ChildProcess.emit (events.js:110:17)
+18 verbose stack     at maybeClose (child_process.js:1015:16)
+18 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:1087:5)
+19 verbose pkgid cordova-plugin-admob-simple@3.1.3
+20 verbose cwd C:\Users\matthew\Google Drive\MyDocs\dev\plugins\cordova-plugin-admob-simple
+21 error Windows_NT 6.1.7601
+22 error argv "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish"
+23 error node v0.12.2
+24 error npm  v2.7.4
+25 error code ELIFECYCLE
+26 error cordova-plugin-admob-simple@3.1.3 prepublish: `npm-run-all clean build`
+26 error Exit status 1
+27 error Failed at the cordova-plugin-admob-simple@3.1.3 prepublish script 'npm-run-all clean build'.
+27 error This is most likely a problem with the cordova-plugin-admob-simple package,
+27 error not with npm itself.
+27 error Tell the author that this fails on your system:
+27 error     npm-run-all clean build
+27 error You can get their info via:
+27 error     npm owner ls cordova-plugin-admob-simple
+27 error There is likely additional logging output above.
+28 verbose exit [ 1, true ]
