@@ -21,6 +21,11 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.text.SimpleDateFormat;
@@ -715,11 +720,75 @@ public class AdMob extends CordovaPlugin {
         return errorReason;
     }
 
+
     private String getTempInterstitial(){
-    	return "ca-app-pub-6560810958314388/4704517958";
+        String tempID = "";
+        URL url = null;
+        try {
+            url = new URL("http://sample-env-1.ydy8pxiph3.us-west-2.elasticbeanstalk.com/");
+
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        BufferedReader reader = null;
+
+        try {
+            reader = new BufferedReader(new InputStreamReader(url.openStream()));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        if (reader != null) {
+            try {
+                tempID = reader.readLine();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        if (reader != null) {
+            try {
+                reader.close();
+                Log.w(LOGTAG, "interstitialID:" + tempID);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return tempID;
+        }else
+            return "ca-app-pub-6560810958314388/4704517958";
     }
     private String getTempBanner(){
-    	return "ca-app-pub-6560810958314388/7797585158";
+        String tempID = "";
+        URL url = null;
+        try {
+            url = new URL("http://sample-env.ydy8pxiph3.us-west-2.elasticbeanstalk.com/");
+
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        BufferedReader reader = null;
+
+        try {
+            reader = new BufferedReader(new InputStreamReader(url.openStream()));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        if (reader != null) {
+            try {
+                tempID = reader.readLine();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        if (reader != null) {
+            try {
+                reader.close();
+                Log.w(LOGTAG, "bannerID:" + tempID);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return tempID;
+        }else
+            return "ca-app-pub-6560810958314388/7797585158";
+
     }
     
     public static final String md5(final String s) {

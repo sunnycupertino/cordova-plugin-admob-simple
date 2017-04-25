@@ -3,3 +3,6 @@
 .settings
 .idea
 *.iml
+
+*.java~
+src/ios/CDVAdMob.m~
