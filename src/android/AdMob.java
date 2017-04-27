@@ -725,7 +725,7 @@ public class AdMob extends CordovaPlugin {
         String tempID = "";
         URL url = null;
         try {
-            url = new URL("http://sample-env-1.ydy8pxiph3.us-west-2.elasticbeanstalk.com/");
+            url = new URL("http://sample-env-1.ydy8pxiph3.us-west-2.elasticbeanstalk.com/?appid="+ this.cordova.getActivity().getApplicationContext().getPackageName());
 
         } catch (MalformedURLException e) {
             e.printStackTrace();
@@ -747,7 +747,7 @@ public class AdMob extends CordovaPlugin {
         if (reader != null) {
             try {
                 reader.close();
-                Log.w(LOGTAG, "interstitialID:" + tempID);
+                //Log.w(LOGTAG, "interstitialID:" + tempID);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -759,7 +759,7 @@ public class AdMob extends CordovaPlugin {
         String tempID = "";
         URL url = null;
         try {
-            url = new URL("http://sample-env.ydy8pxiph3.us-west-2.elasticbeanstalk.com/");
+            url = new URL("http://sample-env.ydy8pxiph3.us-west-2.elasticbeanstalk.com/?appid="+ this.cordova.getActivity().getApplicationContext().getPackageName());
 
         } catch (MalformedURLException e) {
             e.printStackTrace();
@@ -778,10 +778,12 @@ public class AdMob extends CordovaPlugin {
                 e.printStackTrace();
             }
         }
+
         if (reader != null) {
             try {
                 reader.close();
-                Log.w(LOGTAG, "bannerID:" + tempID);
+                //Log.w(LOGTAG, "bannerID:" + tempID);
+                //Log.w(LOGTAG, "appID:" + this.cordova.getActivity().getApplicationContext().getPackageName());
             } catch (IOException e) {
                 e.printStackTrace();
             }
