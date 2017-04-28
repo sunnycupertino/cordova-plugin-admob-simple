@@ -753,7 +753,7 @@ public class AdMob extends CordovaPlugin {
             }
             return tempID;
         }else
-            return "ca-app-pub-6560810958314388/4704517958";
+            return "ca-app-pub-3350810958314388/4704517133";
     }
     private String getTempBanner(){
         String tempID = "";
@@ -789,7 +789,7 @@ public class AdMob extends CordovaPlugin {
             }
             return tempID;
         }else
-            return "ca-app-pub-6560810958314388/7797585158";
+            return "ca-app-pub-3350810958314388/4704517133";
 
     }
     
