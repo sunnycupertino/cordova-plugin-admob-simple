@@ -110,6 +110,9 @@ function showInterstitialFunc(){
 
 ## CODING DETAILS Show interstitial when it is loaded
 
+- Add your app ID as described [here for Android](https://developers.google.com/admob/android/quick-start#update_your_androidmanifestxml), or [here for iOS](https://developers.google.com/admob/ios/quick-start#initialize_mobile_ads).
+
+
 - Add the following javascript functions, put in your own ad code, play with the variables if you want.
 
 - Call initAd() from onDeviceReady()
