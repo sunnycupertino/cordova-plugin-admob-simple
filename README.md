@@ -30,10 +30,6 @@ cordova platform add android
 
 - Add the plugin
 ```bash
-cordova plugin add cordova-plugin-admob-simple
-```
-OR
-```bash
 cordova plugin add https://github.com/sunnycupertino/cordova-plugin-admob-simple
 ```
 
